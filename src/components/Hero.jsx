@@ -33,18 +33,19 @@ const Hero = () => {
 
         {/* Main heading */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-          Vinod Jangid
+          Jenil Goswami
         </h1>
 
         {/* Subheading */}
         <h2 className="text-xl sm:text-2xl lg:text-3xl text-foreground mb-6">
-          I create & develop digital experiences
+          Student & Full-Stack Developer
         </h2>
 
         {/* Description */}
         <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-          Full-stack developer with expertise in modern web technologies. I love building 
-          beautiful, functional applications that solve real-world problems.
+          Passionate student and full-stack developer who loves building AI agents, workflows, 
+          and solving real-world problems with modern web technologies. I enjoy creating 
+          innovative solutions that make a meaningful impact.
         </p>
 
         {/* CTA Buttons */}
