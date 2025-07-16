@@ -140,7 +140,7 @@ const Contact = () => {
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-border/50 text-center">
           <p className="text-muted-foreground">
-            © 2024 Vinod Jangid. Built with React & TypeScript.
+            © 2024 Vinod Jangid. Built with React & JavaScript.
           </p>
         </div>
       </div>

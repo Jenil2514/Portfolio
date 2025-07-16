@@ -12,7 +12,7 @@ const Navigation = () => {
     { name: 'Contact', href: '#contact' },
   ];
 
-  const scrollToSection = (href: string) => {
+  const scrollToSection = (href) => {
     setIsMenuOpen(false);
     const element = document.querySelector(href);
     if (element) {
