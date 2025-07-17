@@ -1,44 +1,69 @@
+import { 
+  SiJavascript, 
+  SiReact, 
+  SiNodedotjs, 
+  SiTypescript, 
+  SiHtml5, 
+  SiCss3, 
+  SiPython, 
+  SiGit, 
+  SiCplusplus, 
+  SiMysql 
+} from 'react-icons/si';
+
 const Skills = () => {
   const skills = [
     {
-      name: "HTML5",
-      icon: "🏗️",
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      name: "CSS3",
-      icon: "🎨",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
       name: "JavaScript",
-      icon: "⚡",
+      icon: <SiJavascript className="text-4xl text-yellow-400" />,
       color: "from-yellow-500 to-orange-500"
     },
     {
       name: "React",
-      icon: "⚛️",
+      icon: <SiReact className="text-4xl text-cyan-400" />,
       color: "from-blue-400 to-blue-600"
     },
     {
       name: "Node.js",
-      icon: "🟢",
+      icon: <SiNodedotjs className="text-4xl text-green-500" />,
       color: "from-green-500 to-green-600"
     },
+      
+    
     {
       name: "TypeScript",
-      icon: "📘",
+      icon: <SiTypescript className="text-4xl text-blue-600" />,
       color: "from-blue-600 to-blue-700"
     },
     {
+      name: "HTML5",
+      icon: <SiHtml5 className="text-4xl text-orange-500" />,
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      name: "CSS3",
+      icon: <SiCss3 className="text-4xl text-blue-500" />,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
       name: "Python",
-      icon: "🐍",
+      icon: <SiPython className="text-4xl text-yellow-500" />,
       color: "from-blue-500 to-yellow-500"
     },
     {
       name: "Git",
-      icon: "📚",
+      icon: <SiGit className="text-4xl text-orange-600" />,
       color: "from-orange-500 to-red-500"
+    },
+    {
+      name: "C++",
+      icon: <SiCplusplus className="text-4xl text-blue-600" />,
+      color: "from-blue-600 to-purple-600"
+    },
+    {
+      name: "SQL",
+      icon: <SiMysql className="text-4xl text-orange-500" />,
+      color: "from-indigo-500 to-blue-600"
     }
   ];
 
@@ -73,7 +98,7 @@ const Skills = () => {
               
               {/* Content */}
               <div className="relative z-10 text-center">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="mb-4 group-hover:scale-110 transition-transform duration-300 flex justify-center">
                   {skill.icon}
                 </div>
                 <h4 className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
@@ -94,8 +119,8 @@ const Skills = () => {
           </h4>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "MongoDB", "PostgreSQL", "AWS", "Docker", "Figma", "Tailwind CSS", 
-              "Next.js", "Express.js", "Redux", "GraphQL", "Jest", "Webpack"
+              "MongoDB", "PostgreSQL","Figma", "Tailwind CSS", 
+              "Next.js", "Express.js","Jest","Bootstrap", "Material-UI"
             ].map((tech) => (
               <span
                 key={tech}

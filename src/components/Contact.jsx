@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MessageSquare, Send } from 'lucide-react';
+import { Github, Linkedin, Mail, MessageSquare, Send, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Contact = () => {
@@ -6,27 +6,22 @@ const Contact = () => {
     {
       name: "GitHub",
       icon: Github,
-      url: "https://github.com",
+      url: "https://github.com/Jenil2514",
       color: "hover:text-gray-400"
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/jenilgoswami",
       color: "hover:text-blue-400"
     },
     {
       name: "Email",
       icon: Mail,
-      url: "mailto:your.email@example.com",
+      url: "mailto:jenilgoswami25@gmail.com",
       color: "hover:text-red-400"
     },
-    {
-      name: "Discord",
-      icon: MessageSquare,
-      url: "#",
-      color: "hover:text-purple-400"
-    }
+    
   ];
 
   return (
@@ -94,7 +89,7 @@ const Contact = () => {
               </h4>
               <div className="space-y-2">
                 <p className="text-muted-foreground">
-                  <span className="font-semibold">Email:</span> your.email@example.com
+                  <span className="font-semibold">Email:</span> jenilgoswami25@gmail.com
                 </p>
                 <p className="text-muted-foreground">
                   <span className="font-semibold">Location:</span> India
@@ -114,7 +109,7 @@ const Contact = () => {
                 <div className="absolute inset-0 bg-gradient-primary opacity-10"></div>
                 <div className="relative z-10">
                   <div className="w-20 h-20 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-3xl font-bold text-primary">V</span>
+                    <span className="text-3xl font-bold text-primary">JG</span>
                   </div>
                   <p className="text-muted-foreground font-mono text-sm">
                     Ready to connect!
@@ -130,6 +125,7 @@ const Contact = () => {
             <Button
               size="lg"
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group"
+              onClick={() => window.location.href = 'https://www.linkedin.com/in/jenilgoswami'}
             >
               <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               Send Message
@@ -140,7 +136,7 @@ const Contact = () => {
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-border/50 text-center">
           <p className="text-muted-foreground">
-            © 2024 Vinod Jangid. Built with React & JavaScript.
+            © 2024 Jenil Goswami. Built with React & JavaScript.
           </p>
         </div>
       </div>

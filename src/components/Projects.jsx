@@ -1,36 +1,39 @@
 import { ExternalLink, Github, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import skillpilot from '../images/SkillPilot.png';
+import dbms from '../images/DBMS.png';
+import flixify from '../images/Flixify.png';
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce platform built with React and Node.js. Features include user authentication, product catalog, shopping cart, and payment integration.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "/api/placeholder/600/400",
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true
+      title: "SkillPilot | Community Driven Learning platform",
+      description: "• A platform where students <strong >learn, discover and share top free resources </strong>\n•<strong> Structured learning </strong>with course <strong>checkpoints and progress tracking</strong>\n• Community-driven content with <strong>upvotes and comments</strong>\n• Discover content from <strong>YouTube, GFG, and other</strong> learning platforms \n• <strong>Integrated AI agent to validate user-submitted links</strong>, implemented <strong>university-specific course</strong> and a student <strong>community feed </strong>for student collaboration.",
+      technologies: ["React", "Node.js", "MongoDB","Tailwind CSS","Make.com (Ai agent)"],
+      image: skillpilot,
+      liveUrl: "https://skill-pilot-lake.vercel.app",
+      githubUrl: "https://github.com/Jenil2514/SkillPilot",
+      featured: false
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team collaboration features, and project tracking capabilities.",
-      technologies: ["React", "TypeScript", "Socket.io", "PostgreSQL"],
-      image: "/api/placeholder/600/400",
+      title: "InvestPro | Stock Trading Database System",
+      description: "• Led a team of 5 to design a Groww/Angel One-inspired relational database with trading modules \n• implemented <strong>25+</strong> complex SQL queries for advanced analytics like P&L, IPO filters, and trade window.",
+      technologies: ["PostgreSQL"],
+      image: dbms,
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Jenil2514/InvestPro",
       featured: false
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "A beautiful weather dashboard that provides current weather conditions, forecasts, and weather maps with a clean, intuitive interface.",
-      technologies: ["React", "OpenWeather API", "Chart.js", "CSS"],
-      image: "/api/placeholder/600/400",
-      liveUrl: "#",
-      githubUrl: "#",
+      title: "Flixify | Entertainment App",
+      description: "A <strong>Figma</strong> Working <strong>prototype</strong> of Entertainment App with features like:\n• <strong>Mood Watch</strong>\n• An <strong>interactive movie</strong> where the viewer chooses how the story unfolds.\n• <strong>AI generated Recape</strong>\n• <strong>Short-Series</strong>",
+      technologies: ["Figma"],
+      image: flixify,
+      liveUrl: "https://www.figma.com/proto/KgEVuwBkTFKNAIYkM0lM0s/Prototype?node-id=0-1&t=ZmUyY5xU1qdv8pUr-1",
+      githubUrl: "https://github.com/Jenil2514/FlixiFy_Entertainment_APP",
       featured: false
     }
   ];
@@ -60,15 +63,12 @@ const Projects = () => {
               {/* Project Image */}
               <div className={`relative group ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                 <div className="relative overflow-hidden rounded-xl border border-border/50 bg-muted">
-                  <div className="aspect-video bg-gradient-subtle flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <Sparkles className="h-8 w-8 text-primary" />
-                      </div>
-                      <p className="text-muted-foreground font-mono text-sm">
-                        {project.title}
-                      </p>
-                    </div>
+                  <div className="aspect-video">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   
                   {/* Overlay */}
@@ -89,9 +89,11 @@ const Projects = () => {
                   <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {project.description}
-                  </p>
+                  <div 
+                    className="text-muted-foreground leading-relaxed whitespace-pre-line"
+                    dangerouslySetInnerHTML={{ __html: project.description }}
+                  />
+                
                 </div>
 
                 {/* Technologies */}
@@ -112,6 +114,8 @@ const Projects = () => {
                     variant="outline"
                     size="sm"
                     className="border-primary/50 hover:border-primary hover:bg-primary/10 transition-all duration-300"
+                    onClick={() => window.open(project.liveUrl, '_blank')}
+                    disabled={project.liveUrl === '#'}
                   >
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Live Demo
@@ -120,6 +124,8 @@ const Projects = () => {
                     variant="outline"
                     size="sm"
                     className="border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
+                    onClick={() => window.open(project.githubUrl, '_blank')}
+                    disabled={project.githubUrl === '#'}
                   >
                     <Github className="mr-2 h-4 w-4" />
                     Source Code
@@ -136,6 +142,7 @@ const Projects = () => {
             variant="outline"
             size="lg"
             className="border-primary/50 hover:border-primary hover:bg-primary/10 transition-all duration-300"
+            onClick={() => window.open('https://github.com/Jenil2514', '_blank')}
           >
             <Github className="mr-2 h-4 w-4" />
             View More on GitHub

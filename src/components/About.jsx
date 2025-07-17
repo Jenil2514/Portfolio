@@ -1,5 +1,6 @@
 import { Download, MapPin, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import profile from '../images/Jenil.jpg'
 
 const About = () => {
   return (
@@ -20,25 +21,26 @@ const About = () => {
           <div className="space-y-6">
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-foreground">
-                Hi! I'm Vinod, a passionate web developer and digital creator.
+                Hi! I'm Jenil, a full-stack developer passionate about building real-world impactful products.
               </h3>
-              
+
               <p className="text-muted-foreground leading-relaxed">
-                I love creating things that exist on the internet. My journey in web development 
-                started in 2021 when I decided to share my digital concept arts online.
+                I'm currently pursuing my B.Tech in Information and Communication Technology at Dhirubhai Ambani Institute.
+                My journey into tech started with a curiosity to create smart, scalable, and useful platforms for students and professionals alike.
               </p>
 
               <p className="text-muted-foreground leading-relaxed">
-                Instead of just creating an online portfolio, I fell in love with web development. 
-                Building custom solutions taught me a lot about design, user experience, and the 
-                technical aspects of bringing ideas to life.
+                Over time, I've built multiple full-stack web applications using technologies like React.js, Node.js, Express.js,
+                PostgreSQL, and MongoDB. From developing AI-integrated platforms like <strong>SkillPilot</strong> to designing scalable
+                college systems like <strong>EduNexus</strong>, I enjoy solving complex problems through clean and efficient code.
               </p>
 
               <p className="text-muted-foreground leading-relaxed">
-                Today, I focus on creating interesting and creative web applications. I enjoy 
-                coding from scratch and bringing innovative ideas to life in the browser.
+                Beyond code, I value collaboration, design thinking, and continuous learning. Whether it’s coordinating tech events
+                or leading development sprints, I bring creativity, energy, and responsibility to everything I do.
               </p>
             </div>
+
 
             {/* Quick Info */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
@@ -46,16 +48,18 @@ const About = () => {
                 <MapPin className="h-5 w-5 text-primary" />
                 <span className="text-muted-foreground">Based in India</span>
               </div>
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <Calendar className="h-5 w-5 text-primary" />
                 <span className="text-muted-foreground">3+ Years Experience</span>
-              </div>
+              </div> */}
             </div>
 
             {/* Resume Button */}
-            <Button 
+            <Button
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group"
               size="lg"
+              onClick={() => window.open('https://drive.google.com/file/d/1IdbhzcyvvleG7kxgN0MyWJ-eCPk40lc3/view?usp=sharing', '_blank')}
+              // href="https://drive.google.com/file/d/1F4DzWEzd1DELufuyD8zVU2DuJa_xzSAe/view?usp=sharing"
             >
               <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
               Download Resume
@@ -67,15 +71,12 @@ const About = () => {
             <div className="relative w-full max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-2xl opacity-20 animate-pulse"></div>
               <div className="relative bg-muted rounded-2xl p-8 border border-border/50">
-                <div className="w-full h-80 bg-gradient-subtle rounded-xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-3xl font-bold text-primary">V</span>
-                    </div>
-                    <p className="text-muted-foreground font-mono text-sm">
-                      // Professional photo
-                    </p>
-                  </div>
+                <div className="w-full h-85 bg-gradient-subtle rounded-xl overflow-hidden">
+                  <img 
+                    src={profile} 
+                    alt="Jenil - Full Stack Developer" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
