@@ -58,7 +58,7 @@ const About = () => {
             <Button
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group"
               size="lg"
-              onClick={() => window.open('https://drive.google.com/file/d/1nOcCNECDnWeH-JY9WS5vYo7SHodJkkKv/view?usp=sharing', '_blank')}
+              onClick={() => window.open('https://drive.google.com/file/d/1DfecJ1eeJ70WxiYos7EDHn29-3M5I6He/view?usp=sharing', '_blank')}
               // href="https://drive.google.com/file/d/1F4DzWEzd1DELufuyD8zVU2DuJa_xzSAe/view?usp=sharing"
             >
               <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
