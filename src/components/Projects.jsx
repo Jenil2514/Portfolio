@@ -79,7 +79,7 @@ const Projects = () => {
       technologies: ["React.js", "Node.js", "PostgreSQL", "Material UI", "Selenium"],
       image: "/edunexus.png",
       fallbackGradient: "from-amber-500 to-orange-700",
-      liveUrl: "#",
+      liveUrl: "https://edunexus-eta.vercel.app/",
       githubUrl: "https://github.com/Jenil2514/EDUNEXUS",
       featured: false
     }
