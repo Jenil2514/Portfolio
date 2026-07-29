@@ -1,8 +1,29 @@
-import { Download, MapPin, Calendar } from 'lucide-react';
+import { useState } from 'react';
+import { Download, MapPin, Calendar, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import profile from '../images/Jenil.jpg'
 
 const About = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const resumes = [
+    {
+      name: "General Resume",
+      description: "Full-Stack & Systems (PDF)",
+      url: "/Jenil_Goswami_General_Resume.pdf"
+    },
+    {
+      name: "Software Engineering Resume",
+      description: "Core Software Dev focus (DOCX)",
+      url: "/Jenil_Goswami_Software_Engineer_Resume.docx"
+    },
+    {
+      name: "AI & Automation Resume",
+      description: "Agents, RAG & Workflows (DOCX)",
+      url: "/Jenil_Goswami_Automation_Resume.docx"
+    }
+  ];
+
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -21,49 +42,71 @@ const About = () => {
           <div className="space-y-6">
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-foreground">
-                Hi! I'm Jenil, a full-stack developer passionate about building real-world impactful products.
+                Hi! I'm Jenil, a software engineer passionate about building high-impact full-stack applications and AI-powered solutions.
               </h3>
 
               <p className="text-muted-foreground leading-relaxed">
-                I'm currently pursuing my B.Tech in Information and Communication Technology at Dhirubhai Ambani Institute.
-                My journey into tech started with a curiosity to create smart, scalable, and useful platforms for students and professionals alike.
+                I am a B.Tech Graduate in Information and Communication Technology from <strong>Dhirubhai Ambani University</strong> (DA-IICT), Gandhinagar. My journey in technology is driven by a deep interest in system design, backend infrastructure, and agentic AI automation.
               </p>
 
               <p className="text-muted-foreground leading-relaxed">
-                Over time, I've built multiple full-stack web applications using technologies like React.js, Node.js, Express.js,
-                PostgreSQL, and MongoDB. From developing AI-integrated platforms like <strong>SkillPilot</strong> to designing scalable
-                college systems like <strong>EduNexus</strong>, I enjoy solving complex problems through clean and efficient code.
+                I have hands-on production experience building robust web applications and automated workflows. As a Full-Stack Intern at <strong>Axy Inc.</strong>, I designed bulk-data validation pipelines and zero-downtime content sync layers. Additionally, my time at <strong>Datahay Infotech</strong> refined my capabilities in user-centered design and end-to-end interface prototyping.
               </p>
 
               <p className="text-muted-foreground leading-relaxed">
-                Beyond code, I value collaboration, design thinking, and continuous learning. Whether it’s coordinating tech events
-                or leading development sprints, I bring creativity, energy, and responsibility to everything I do.
+                Whether orchestrating multi-agent systems like <strong>AutoBiz</strong>, optimizing vector retrieval systems, or leading cross-functional teams at technical fests, I bring clean code, structural engineering principles, and a user-first mindset to every codebase I touch.
               </p>
             </div>
 
 
             {/* Quick Info */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 pb-2">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span className="text-muted-foreground">Based in India</span>
+                <span className="text-muted-foreground">Anand, Gujarat, India</span>
               </div>
-              {/* <div className="flex items-center space-x-3">
-                <Calendar className="h-5 w-5 text-primary" />
-                <span className="text-muted-foreground">3+ Years Experience</span>
-              </div> */}
             </div>
 
-            {/* Resume Button */}
-            <Button
-              className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group"
-              size="lg"
-              onClick={() => window.open('https://drive.google.com/file/d/1DfecJ1eeJ70WxiYos7EDHn29-3M5I6He/view?usp=sharing', '_blank')}
-              // href="https://drive.google.com/file/d/1F4DzWEzd1DELufuyD8zVU2DuJa_xzSAe/view?usp=sharing"
-            >
-              <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
-              Download Resume
-            </Button>
+            {/* Resume Button dropdown */}
+            <div className="relative inline-block text-left">
+              <Button
+                className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group flex items-center gap-2"
+                size="lg"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              >
+                <Download className="h-4 w-4 group-hover:animate-bounce" />
+                <span>Download Resume</span>
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+              </Button>
+
+              {isDropdownOpen && (
+                <>
+                  <div 
+                    className="fixed inset-0 z-30" 
+                    onClick={() => setIsDropdownOpen(false)}
+                  />
+                  <div className="absolute left-0 mt-2 w-64 origin-top-left rounded-xl bg-card border border-border/80 shadow-2xl z-40 focus:outline-none overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="py-1">
+                      {resumes.map((res) => (
+                        <button
+                          key={res.name}
+                          onClick={() => {
+                            window.open(res.url, '_blank');
+                            setIsDropdownOpen(false);
+                          }}
+                          className="flex items-center w-full px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/40 transition-colors duration-150 border-b border-border/20 last:border-b-0"
+                        >
+                          <div className="text-left">
+                            <p className="font-semibold text-foreground">{res.name}</p>
+                            <p className="text-xs text-muted-foreground/80 mt-0.5">{res.description}</p>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
 
           {/* Image */}

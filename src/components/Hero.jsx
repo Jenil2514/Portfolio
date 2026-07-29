@@ -38,14 +38,12 @@ const Hero = () => {
 
         {/* Subheading */}
         <h2 className="text-xl sm:text-2xl lg:text-3xl text-foreground mb-6">
-          Student & Full-Stack Developer
+          B.Tech Graduate & Full-Stack Developer
         </h2>
 
         {/* Description */}
         <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-          Passionate student and full-stack developer who loves building AI agents, workflows, 
-          and solving real-world problems with modern web technologies. I enjoy creating 
-          innovative solutions that make a meaningful impact.
+          B.Tech Graduate in Information and Communication Technology with hands-on production experience building full-stack web applications, scalable backend infrastructures, and AI-powered automation agents.
         </p>
 
         {/* CTA Buttons */}
