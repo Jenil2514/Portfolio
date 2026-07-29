@@ -10,9 +10,9 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-subtle opacity-50"></div>
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-black relative overflow-hidden">
+      {/* Background gradient (fade to solid black at the bottom to blend with About) */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black z-0 pointer-events-none"></div>
       
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden">

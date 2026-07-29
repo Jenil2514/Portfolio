@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 /node_modules
 /dist
+/ezgif-42b20e802a479fae-png-split
+.agents
