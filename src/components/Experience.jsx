@@ -74,7 +74,7 @@ const Experience = () => {
 
     frameIndices.forEach((frameNum, index) => {
       const img = new Image();
-      img.src = `/walking-frames/ezgif-frame-${String(frameNum).padStart(3, '0')}.png`;
+      img.src = `/walking-frames/ezgif-frame-${String(frameNum).padStart(3, '0')}.webp`;
       img.onload = () => {
         loadedCount++;
         if (loadedCount === frameIndices.length) {
