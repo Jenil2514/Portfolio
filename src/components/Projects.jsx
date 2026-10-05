@@ -30,12 +30,12 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "AutoBiz - Multi-Agent Business Automation Platform",
+      title: "FastForward - Multi-Agent Business Automation Platform",
       description: "• Architected a multi-agent business automation platform unifying email, scheduling, content, sales, and finance workflows into a single system.\n• Built an email reply automation and timezone-aware appointment booking agent with Groq-powered human-in-the-loop escalation.\n• Developed LangGraph & Gemini orchestrated content agents (newsletter generator, interactive LinkedIn agent with live voice (Deepgram) to post translation, and social media image template generator).\n• Implemented deal tracking pipelines and a complete invoicing system integrated with Stripe for recurring payments, estimates, and PDF alerts.",
       technologies: ["Next.js", "FastAPI", "LangGraph", "Groq", "Gemini AI", "Deepgram", "Stripe API", "PostgreSQL"],
       image: "/autobiz.png",
       fallbackGradient: "from-indigo-600 to-purple-800",
-      liveUrl: "https://autobiz-prod.vercel.app/",
+      liveUrl: "https://fastforwardos.com",
       githubUrl: "https://github.com/Jenil2514",
       featured: true
     },
