@@ -8,7 +8,7 @@ const About = () => {
 
   const resumes = [
     {
-      name: "General Resume",
+      name: "Resume",
       description: "Full-Stack & Systems (PDF)",
       url: "/Jenil_Goswami.pdf"
     },
